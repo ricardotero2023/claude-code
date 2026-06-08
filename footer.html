@@ -52,19 +52,10 @@
 
     /* Brand column */
     .footer__logo {
-      width: 56px;
-      height: 56px;
+      width: 160px;
+      height: auto;
       object-fit: contain;
       margin-bottom: 14px;
-    }
-
-    .footer__brand-name {
-      font-size: 1.15rem;
-      font-weight: 800;
-      color: #ffffff;
-      margin-bottom: 10px;
-      text-decoration: underline;
-      text-decoration-color: rgba(255,255,255,0.3);
     }
 
     .footer__tagline {
@@ -84,22 +75,11 @@
     }
 
     /* Nav links */
-    .footer__links li { margin-bottom: 10px; }
+    .footer__links li { margin-bottom: 8px; }
     .footer__links a {
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.6);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .footer__links a::before {
-      content: '';
-      display: inline-block;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #8B2272;
-      flex-shrink: 0;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.55);
+      display: inline;
     }
     .footer__links a:hover { color: #c060a8; }
 
@@ -200,8 +180,7 @@
 
       <!-- Marca -->
       <div class="footer__brand">
-        <img src="img/logo.png" alt="Zona Informática" class="footer__logo" width="56" height="56" onerror="this.style.display='none'">
-        <div class="footer__brand-name">Zona Informática</div>
+        <img src="https://zonagalicia.com/wp-content/uploads/2026/06/zona-informatica-transparente.webp" alt="Zona Informática Pontevedra" class="footer__logo" loading="lazy">
         <p class="footer__tagline">Servicio técnico e informática profesional para empresas y autónomos de la provincia de Pontevedra.</p>
       </div>
 
