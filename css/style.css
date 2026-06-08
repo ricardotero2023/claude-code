@@ -773,8 +773,8 @@ ul { list-style: none; }
 
 /* --- Page Hero --- */
 .page-hero {
-  background: linear-gradient(135deg, var(--color-dark) 0%, #2d0a24 100%);
-  color: var(--color-white);
+  background: linear-gradient(160deg, #2c1654 0%, #4a1f7c 50%, #6b2490 100%);
+  color: #ffffff;
   padding: 64px 0 56px;
   text-align: center;
 }
@@ -796,6 +796,7 @@ ul { list-style: none; }
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
   margin-bottom: 12px;
+  color: #ffffff !important;
 }
 
 .page-hero__subtitle {
@@ -1255,3 +1256,5 @@ ul { list-style: none; }
 .stats-band a, .topbar a {
   color: #ffffff;
 }
+
+.service-detail-card__icon svg, .value-card__icon svg { color: var(--color-primary); }
