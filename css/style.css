@@ -775,9 +775,14 @@ ul { list-style: none; }
 .page-hero {
   background: linear-gradient(160deg, #2c1654 0%, #4a1f7c 50%, #6b2490 100%);
   color: #ffffff;
-  padding: 64px 0 56px;
+  padding: 72px 0 64px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  min-height: 260px;
 }
+
+.page-hero > .container { width: 100%; }
 
 .page-hero__breadcrumb {
   display: flex;
@@ -797,6 +802,7 @@ ul { list-style: none; }
   font-weight: 800;
   margin-bottom: 12px;
   color: #ffffff !important;
+  text-align: center;
 }
 
 .page-hero__subtitle {
