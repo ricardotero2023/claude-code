@@ -4,31 +4,6 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
-  // --- Mobile nav toggle ---
-  const toggle = document.getElementById('navToggle');
-  const nav = document.getElementById('mainNav');
-  if (toggle && nav) {
-    toggle.addEventListener('click', function () {
-      const open = nav.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', open);
-    });
-    document.addEventListener('click', function (e) {
-      if (!toggle.contains(e.target) && !nav.contains(e.target)) {
-        nav.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-  }
-
-  // --- Active nav link ---
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.navbar__link').forEach(function (link) {
-    if (link.getAttribute('href') === currentPage) {
-      link.classList.add('active');
-      link.setAttribute('aria-current', 'page');
-    }
-  });
-
   // --- Cookie banner ---
   const banner = document.getElementById('cookieBanner');
   const acceptBtn = document.getElementById('cookieAccept');
@@ -65,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function () {
       submitBtn.disabled = true;
       submitBtn.textContent = 'Enviando...';
 
-      // Simulate send (replace with actual endpoint)
       setTimeout(function () {
         contactForm.reset();
         submitBtn.disabled = false;
@@ -85,10 +59,6 @@ document.addEventListener('DOMContentLoaded', function () {
       if (target) {
         e.preventDefault();
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        if (nav) {
-          nav.classList.remove('is-open');
-          if (toggle) toggle.setAttribute('aria-expanded', 'false');
-        }
       }
     });
   });

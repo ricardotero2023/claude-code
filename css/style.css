@@ -22,7 +22,7 @@
   --shadow-lg: 0 8px 40px rgba(0,0,0,0.16);
   --radius: 8px;
   --transition: 0.3s ease;
-  --max-width: 1200px;
+  --max-width: 1380px;
 }
 
 /* --- Reset & Base --- */
@@ -31,6 +31,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -38,6 +39,8 @@ body {
   color: var(--color-text);
   background: var(--color-white);
   line-height: 1.6;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -267,8 +270,8 @@ ul { list-style: none; }
 
 /* --- Hero --- */
 .hero {
-  background: linear-gradient(135deg, var(--color-dark) 0%, #2d0a24 50%, var(--color-primary-dark) 100%);
-  color: var(--color-white);
+  background: linear-gradient(135deg, #1e1433 0%, #2a1040 50%, #3d1a5c 100%);
+  color: #ffffff;
   padding: 100px 0 80px;
   position: relative;
   overflow: hidden;
@@ -281,7 +284,7 @@ ul { list-style: none; }
   right: -10%;
   width: 700px;
   height: 700px;
-  background: radial-gradient(circle, rgba(139,34,114,0.3) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(139,34,114,0.18) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -292,9 +295,11 @@ ul { list-style: none; }
   left: -5%;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(192,48,110,0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(192,48,110,0.08) 0%, transparent 70%);
   pointer-events: none;
 }
+
+.hero *, .hero a { color: inherit; }
 
 .hero__inner {
   display: grid;
@@ -340,6 +345,7 @@ ul { list-style: none; }
   line-height: 1.15;
   margin-bottom: 20px;
   letter-spacing: -0.02em;
+  color: #ffffff;
 }
 
 .hero__title em {
@@ -349,7 +355,7 @@ ul { list-style: none; }
 
 .hero__text {
   font-size: 1.1rem;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255,255,255,0.85);
   margin-bottom: 36px;
   max-width: 520px;
 }
