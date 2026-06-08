@@ -29,7 +29,6 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
-  scroll-behavior: smooth;
   font-size: 16px;
   overflow-x: hidden;
   -webkit-text-size-adjust: 100%;
@@ -272,7 +271,7 @@ ul { list-style: none; }
 
 /* --- Hero --- */
 .hero {
-  background: linear-gradient(135deg, #1e1433 0%, #2a1040 50%, #3d1a5c 100%);
+  background: linear-gradient(160deg, #2c1654 0%, #4a1f7c 40%, #6b2490 100%);
   color: #ffffff;
   padding: 100px 0 80px;
   position: relative;
@@ -286,7 +285,7 @@ ul { list-style: none; }
   right: -10%;
   width: 700px;
   height: 700px;
-  background: radial-gradient(circle, rgba(139,34,114,0.18) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(180,80,160,0.22) 0%, transparent 70%);
   pointer-events: none;
 }
 
