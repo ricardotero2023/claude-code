@@ -32,6 +32,7 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -41,6 +42,7 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   width: 100%;
+  -webkit-overflow-scrolling: touch;
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -96,7 +98,7 @@ ul { list-style: none; }
   margin-bottom: 16px;
 }
 .section--dark .section__title,
-.section--primary .section__title { color: var(--color-white); }
+.section--primary .section__title { color: #ffffff !important; }
 
 .section__subtitle {
   font-size: 1.05rem;
@@ -105,7 +107,7 @@ ul { list-style: none; }
   margin: 0 auto;
 }
 .section--dark .section__subtitle,
-.section--primary .section__subtitle { color: rgba(255,255,255,0.8); }
+.section--primary .section__subtitle { color: rgba(255,255,255,0.85) !important; }
 
 /* --- Buttons --- */
 .btn {
@@ -345,7 +347,7 @@ ul { list-style: none; }
   line-height: 1.15;
   margin-bottom: 20px;
   letter-spacing: -0.02em;
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .hero__title em {
@@ -648,6 +650,7 @@ ul { list-style: none; }
   font-size: clamp(1.8rem, 3vw, 2.6rem);
   font-weight: 800;
   margin-bottom: 16px;
+  color: #ffffff !important;
 }
 
 .cta-banner__text {
@@ -1231,4 +1234,25 @@ ul { list-style: none; }
   .site-header, .site-footer, .cookie-banner, .whatsapp-float, .topbar { display: none; }
   body { font-size: 12pt; }
   a[href]::after { content: " (" attr(href) ")"; font-size: 0.8em; }
+}
+
+/* --- Mobile scroll & rendering fixes --- */
+.fade-in {
+  will-change: transform, opacity;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Force white text on all dark/colored backgrounds */
+.hero, .cta-banner, .section--primary, .section--dark,
+.stats-band, .topbar {
+  color: #ffffff;
+}
+.hero *, .cta-banner *, .section--primary *, .section--dark *,
+.stats-band *, .topbar * {
+  color: inherit;
+}
+.hero a, .cta-banner a, .section--primary a, .section--dark a,
+.stats-band a, .topbar a {
+  color: #ffffff;
 }
