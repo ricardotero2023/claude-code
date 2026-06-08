@@ -1,0 +1,123 @@
+/* =============================================
+   ZONA INFORMÁTICA – Footer styles
+   Pegar en: child theme > style.css
+   (o Divi > Personalizar > CSS adicional)
+   ============================================= */
+
+/* ── Main footer ── */
+.site-footer {
+  background: #12111f;
+  color: #ffffff;
+  padding: 60px 0 0;
+}
+
+/* ── Kit Digital banner ── */
+.footer__kitdigital {
+  margin-bottom: 48px;
+  text-align: center;
+}
+.footer__kitdigital img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  border-radius: 8px;
+}
+
+/* ── 4-col grid ── */
+.footer__main {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.4fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Brand column */
+.footer__logo {
+  width: 160px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 14px;
+  display: block;
+}
+.footer__tagline {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+}
+
+/* Column titles */
+.footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* Nav links */
+.footer__links { list-style: none; padding: 0; margin: 0; }
+.footer__links li { margin-bottom: 4px; }
+.footer__links a {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+}
+.footer__links a:hover { color: #c060a8; }
+
+/* Contact items */
+.footer__contact-items { display: flex; flex-direction: column; gap: 14px; }
+.footer__contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.5;
+}
+.footer__contact-item svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: #8B2272;
+}
+.footer__contact-item a { color: #c060a8; text-decoration: none; }
+.footer__contact-item a:hover { color: #ffffff; }
+
+/* ── Bottom bar ── */
+.footer__bottom {
+  background: #0c0b18;
+  padding: 18px 0;
+}
+.footer__bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer__copyright {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.35);
+}
+.footer__copyright a {
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+}
+.footer__copyright a:hover { color: #c060a8; }
+.footer__legal-links { display: flex; gap: 20px; flex-wrap: wrap; }
+.footer__legal-links a {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.4);
+  text-decoration: none;
+}
+.footer__legal-links a:hover { color: rgba(255,255,255,0.8); }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .footer__main { grid-template-columns: 1fr 1fr; gap: 36px; }
+}
+@media (max-width: 560px) {
+  .footer__main { grid-template-columns: 1fr; gap: 28px; }
+  .footer__bottom-inner { flex-direction: column; text-align: center; }
+}
