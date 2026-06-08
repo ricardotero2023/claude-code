@@ -536,7 +536,7 @@ ul { list-style: none; }
   padding: 40px;
 }
 
-.why__image-placeholder .icon { font-size: 5rem; margin-bottom: 16px; }
+.why__image-placeholder svg { margin: 0 auto 16px; display: block; }
 .why__image-placeholder p { font-size: 1rem; }
 
 /* --- Stats / Numbers --- */
