@@ -39,7 +39,7 @@ Tamaño recomendado: 200×200 px mínimo, fondo transparente (PNG).
 ### 2. Actualizar datos de contacto
 Busca y reemplaza en todos los archivos HTML:
 - `986 000 000` → número de teléfono real
-- `info@zonainformatica.es` → email real
+- `info@zonagalicia.com` → email real
 - `Pontevedra, Galicia` → dirección completa real
 - `B-XXXXXXXX` → CIF real de Informática de Zona S.L.
 
@@ -72,7 +72,7 @@ Para subir a WordPress mantén la estructura visual usando el **tema hijo** o un
 
 | Requisito | Estado |
 |-----------|--------|
-| Dominio propio (zonainformatica.es) | ✅ (ya tienen el dominio) |
+| Dominio propio (zonagalicia.com) | ✅ (ya tienen el dominio) |
 | Diseño responsive (móvil/tablet/escritorio) | ✅ |
 | Accesibilidad WCAG 2.1 nivel AA | ✅ (landmarks, aria, skip-link, focus-visible) |
 | SEO on-page (title, meta, H1, alt, canonical) | ✅ |

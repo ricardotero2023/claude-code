@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /img/
 
-Sitemap: https://www.zonainformatica.es/sitemap.xml
+Sitemap: https://www.zonagalicia.com/sitemap.xml
