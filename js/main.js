@@ -29,26 +29,31 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // --- Contact form ---
+  // --- Contact form → WhatsApp ---
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      const successMsg = document.getElementById('formSuccess');
-      const submitBtn = contactForm.querySelector('[type="submit"]');
 
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Enviando...';
+      const nombre   = contactForm.querySelector('#nombre').value.trim();
+      const empresa  = contactForm.querySelector('#empresa').value.trim();
+      const email    = contactForm.querySelector('#email').value.trim();
+      const telefono = contactForm.querySelector('#telefono').value.trim();
+      const servicio = contactForm.querySelector('#servicio');
+      const servicioTexto = servicio.options[servicio.selectedIndex].text !== '-- Selecciona una opción --'
+        ? servicio.options[servicio.selectedIndex].text : '';
+      const mensaje  = contactForm.querySelector('#mensaje').value.trim();
 
-      setTimeout(function () {
-        contactForm.reset();
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Enviar mensaje';
-        if (successMsg) { successMsg.style.display = 'block'; }
-        setTimeout(function () {
-          if (successMsg) { successMsg.style.display = 'none'; }
-        }, 6000);
-      }, 1200);
+      let texto = '👋 *Nuevo contacto desde la web*\n\n';
+      texto += '👤 *Nombre:* ' + nombre + '\n';
+      if (empresa)      texto += '🏢 *Empresa:* ' + empresa + '\n';
+      texto += '✉️ *Email:* ' + email + '\n';
+      if (telefono)     texto += '📞 *Teléfono:* ' + telefono + '\n';
+      if (servicioTexto) texto += '🔧 *Servicio:* ' + servicioTexto + '\n';
+      texto += '\n💬 *Mensaje:*\n' + mensaje;
+
+      const url = 'https://wa.me/34630381183?text=' + encodeURIComponent(texto);
+      window.open(url, '_blank');
     });
   }
 
